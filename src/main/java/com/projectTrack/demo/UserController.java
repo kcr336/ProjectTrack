@@ -13,8 +13,9 @@ public class UserController {
 
 
     @RequestMapping(value = "")
-        public String returnHomePage() {
+        public String returnAppSummary() {
         return "index.html";
+
 }
 
 }
