@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>USA Explorer</title>
+    <title th:text="${title}">USA Explorer</title>
 </head>
 <main>
 <body>
@@ -11,34 +11,14 @@
 <article>
 <h1>Main duties of my application</h1>
     <ul>
-        <li><h2>Create a profile</h2></li>
+        <li><h2 th:text="${title}">Create a User</h2></li>
         <li><h2>Keep track of the States you have been to</h2></li>
         <li><h2>What did you do when you were there</h2></li>
         <li><h2>How would you rate your visit</h2></li>
         <li><h2>What is there to do in states that you haven't been to</h2></li>
         <li><h2>Suggestions based on what you have done in the past</h2></li>
     </ul>
-<h2>Create a profile</h2>
-    <p>The first thing that you will need to do is make a profile for yourself. This will allow you to put in personal information such
-    as your name and your email. It will be kept private. You will also have the option to upload a photo of yourself.</p>
-<h2>Keep track of the states you have been to</h2>
-    <p>Once your profile has been created, now you will have the opportunity to enter in all the States that you have been to and the
-    places that you saw. The program will be able to differentiate where you have and have not been. </p>
-<h2>What did you do when you were there</h2>
-    <p>After you have entered the places that you have been to, you can now go into detail on the things that you did. Once you have done
-     that, you can categorize it based on the type of activity. You will be presented with the categories so that you can group them
-         accordingly. </p>
-<h2>How would you rate your visit</h2>
-    <p>You will be presented with a scale to determine how the visit went. It will be a scale of 1 to 10, with 10 being fantastic and 1
-     being horrible. There are a few factors to consider in your rating. You will provide a rating for the food, the people in the area,
-    what things there were to do, and those will be averaged together to give you your overall rating. </p>
-<h2>What is there to do in states that you haven't been to</h2>
-    <p>The program will keep track of the states that you have not visited yet. Should you decide to see where you need to go, you will
-    have the option to view those states.</p>
-<h2>Suggestions on what to do in those states</h2>
-    <p>For the states that you have not visited yet, you will have the option to explore possible activities that the state is known for. That
-         will include the top ten restaurants, the top ten in activities, and the ten in places to see such as parks or museums.
-    </p>
+
 </article>
 </body>
 </main>
