@@ -2,6 +2,7 @@ package com.projectTrack.demo.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
@@ -12,17 +13,18 @@ import java.util.ArrayList;
 public class UserController {
 
     static ArrayList<String> users = new ArrayList<>();
-    @RequestMapping(value = "")
+    @GetMapping(value = "home")
     public String returnAppSummary() {
-        return "index.html";
+        System.out.println("hello");
+        return "index";
 
 
 }
-    @RequestMapping(value="makeUser")
+    @GetMapping(value="")
     public String makeUser(Model model){
         model.addAttribute("users", users);
         model.addAttribute("title", "Create a User");
-        return "index.html";
+        return "index";
 
         }
 
