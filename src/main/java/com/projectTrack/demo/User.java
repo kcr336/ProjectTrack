@@ -1,10 +1,10 @@
 package com.projectTrack.demo;
 
 public class User {
-    private String userName;
-    private String email;
     private String firstName;
     private String lastName;
+    private String userName;
+    private String email;
 
     public User(String userName, String email, String firstName, String lastName){
         this.userName = userName;
@@ -47,6 +47,8 @@ public class User {
 
     @Override
     public String toString(){
-        return userName + email;
+        return firstName+" "+lastName+
+                "\n "+ userName+
+                "\n "+email;
     }
 }
