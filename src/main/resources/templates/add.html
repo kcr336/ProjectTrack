@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <title th:text="${title}">USA Explorer</title>
+</head>
+<main>
+    <body>
+    <link href="styles.css" type="text/css" rel="stylesheet" media="screen">
+    <header><h1 id="title">Stateside Traveler</h1></header>
+    <article>
+        <h1>Create a User</h1>
+
+        <form method = "post">
+            <label for ="firstName">First Name</label>
+            <input type = "text" name="firstName" id="firstName"/>
+            <label for = "lastName">Last Name</label>
+            <input type = "text" name="lastName" id="lastName"/>
+            <label for = "userName">Username</label>
+            <input type = "text" name="userName" id="userName"/>
+            <label for ="email">Email</label>
+            <input type = "text" name="email" id="email"/>
+            <input type = "submit" value="Add User" />
+        </form>
+
+    </article>
+    </body>
+</main>
+</html>
