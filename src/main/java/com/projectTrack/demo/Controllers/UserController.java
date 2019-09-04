@@ -23,9 +23,15 @@ public class UserController {
     @GetMapping(value="")
     public String makeUser(Model model){
         model.addAttribute("users", users);
+        users.add("Karen Beisel");
         model.addAttribute("title", "Create a User");
-        return "index";
+        return "user";
 
         }
 
+    @RequestMapping (value="add")
+    public String displayAddUserForm(Model model){
+        model.addAttribute("title", "Add a User");
+        return "add";
+    }
 }

@@ -2,8 +2,28 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"> >
 <head>
     <meta charset="UTF-8"/>
-    <title>Stateside Traveler</title>
+    <title th:text="${title}">USA Explorer</title>
 </head>
-<body>
-<h1>Create a User</h1>
-</body>
+<main>
+    <body>
+    <link href="styles.css" type="text/css" rel="stylesheet" media="screen">
+    <header><h1 id="title">Stateside Traveler</h1></header>
+    <article>
+        <h1>Main duties of my application</h1>
+        <ul>
+            <li><h2 th:text="${title}">Create a User</h2></li>
+            <p th:unless="${users} and ${users.size()}">We do not have any Users</p>
+            <ul>
+                <li th:each="user: ${users}" th:text ="${user}"></li>
+            </ul>
+            <li><h2>Keep track of the States you have been to</h2></li>
+            <li><h2>What did you do when you were there</h2></li>
+            <li><h2>How would you rate your visit</h2></li>
+            <li><h2>What is there to do in states that you haven't been to</h2></li>
+            <li><h2>Suggestions based on what you have done in the past</h2></li>
+        </ul>
+
+    </article>
+    </body>
+</main>
+</html>
