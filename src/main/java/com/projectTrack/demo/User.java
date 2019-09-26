@@ -1,16 +1,19 @@
 package com.projectTrack.demo;
 
 public class User {
-    private String firstName;
-    private String lastName;
+    private int id;
+    private String fullName;
     private String userName;
     private String email;
 
-    public User(String userName, String email, String firstName, String lastName){
+    public User(String userName, String email, String firstName, String lastName, int id){
+        this.id = id;
         this.userName = userName;
         this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.fullName= fullName;
+    }
+
+    public User(String userName, String email, String fullName) {
     }
 
     public String getUserName() {
@@ -29,25 +32,26 @@ public class User {
         this.email = email;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public int getId() {
+        return id;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setId(int id) {
+        this.id = id;
     }
+
 
     @Override
     public String toString(){
-        return firstName+" "+lastName+
+        return fullName+
                 "\n "+ userName+
                 "\n "+email;
     }

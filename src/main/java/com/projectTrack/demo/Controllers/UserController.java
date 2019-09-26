@@ -19,7 +19,7 @@ public class UserController {
 
     public UserController() {
         users = new HashMap<>();
-        users.put(1, new User ("kcr336","kcr336@gmail.com","Karen" ,"Beisel"));
+        users.put(1, new User ("kcr336","kcr336@gmail.com","Karen Beisel"));
     }
 
     @GetMapping(value = "home")
@@ -43,9 +43,9 @@ public class UserController {
         return "add";
     }
     @RequestMapping (value="add", method= RequestMethod.POST)
-    public String processAddUserForm(@RequestParam String firstName, @RequestParam String lastName, @RequestParam String userName, @RequestParam String email){
+    public String processAddUserForm(@RequestParam String fullName, @RequestParam String userName, @RequestParam String email){
        int id= users.size()+1;
-       users.put(id, new User (firstName, lastName, userName, email));
+       users.put(id, new User (fullName, userName, email));
         return "redirect:";
     }
 }
