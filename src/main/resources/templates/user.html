@@ -12,9 +12,9 @@
         <h1>Main duties of my application</h1>
         <ul>
             <li><h2 th:text="${title}">Create a User</h2></li>
-            <p th:unless="${users} and ${users.size()}">We do not have any Users</p>
+            <p th:unless="${user} and ${dao}">We do not have any Users</p>
             <ul>
-                <li th:each="user: ${users}" th:text ="${user}"></li>
+                <li th:each="user: ${dao}" th:text ="${user}"></li>
             </ul>
             <a href="/user/add">Add a User</a>
             <li><h2>Keep track of the States you have been to</h2></li>

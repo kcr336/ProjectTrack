@@ -6,15 +6,16 @@ public class User {
     private String userName;
     private String email;
 
-    public User(String userName, String email, String firstName, String lastName, int id){
-        this.id = id;
-        this.userName = userName;
-        this.email = email;
-        this.fullName= fullName;
-    }
+//    public User(String userName, String email, String fullName, int id){
+//        this.id = id;
+//        this.userName = userName;
+//        this.email = email;
+//        this.fullName= fullName;
+//    }
 
     public User(String userName, String email, String fullName) {
     }
+
 
     public String getUserName() {
         return userName;
@@ -51,8 +52,6 @@ public class User {
 
     @Override
     public String toString(){
-        return fullName+
-                "\n "+ userName+
-                "\n "+email;
+        return id+"\n"+userName+ "\n "+ fullName+ "\n "+email;
     }
 }
